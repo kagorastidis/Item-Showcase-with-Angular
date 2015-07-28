@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
+<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+</head>
+
+<body>
+<div class="container">
+   
+<div class="row">
+
+   	<div style="text-align:center;" class="cats" ng-app='app' ng-controller='MainController as main'>
+   		<h1>Cats Show Case!</h1>
+   		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+   		    <ul class="cat-list">
+        <li ng-repeat="cat in main.cats"ng-show="!maxItems || $index < maxItems"><figure><img ng-src="{{cat.image}}" /><figcaption><h5>{{cat.name}}</h5><p><span class="icon"><i class="fa fa-map-marker "></i></span> {{cat.location}}</p></figcaption></figure></li>
+    </ul>
+   <div class="col-sm-12">
+   <div class="more"><button ng-show="maxItems" ng-click="maxItems=0">View more Cats</button><br><p>press me!</p> </div>
+</div>
+
+   	</div>
+   </div>
+
+ </div><!--container-->
+
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="http://code.angularjs.org/1.1.5/angular.min.js"> </script>
+<script src="js/app.js"></script>
+<script src="js/main.ctrl.js"></script>
+
+
+</body>
+</html>
